@@ -1,0 +1,38 @@
+I am going to use a lot of text from the book Operating Systems Concepts by ABRAHAM SILBERSCHATZ, PETER BAER GALVIN and GREG GAGNE along with my own understanding of things.
+
+Process
+  Any application resides in the computer in the form of text (or code).
+
+
+  We emphasize that a program by itself is not a process. A program is a passive entity, such as a file containing a list of instructions stored on disk (often called an executable file).
+  When we start an application, we create an instance of execution. This instance of execution is called a process. EDIT:(As per my interpretation, analogous to a class and an instance of a class, the instance of a class being a process. )
+
+
+  An example of processes is that of Google Chrome. When we start Google Chrome, 3 processes are spawned:
+
+      The browser process is responsible for managing the user interface as well as disk and network I/O. A new browser process is created when Chrome is started. Only one browser process is created.
+      
+      Renderer processes contain logic for rendering web pages. Thus, they contain the logic for handling HTML, Javascript, images, and so forth. As a general rule, a new renderer process is created for each website opened in a new tab, and so several renderer processes may be active at the same time.
+
+      A plug-in process is created for each type of plug-in (such as Flash or QuickTime) in use. Plug-in processes contain the code for the plug-in as well as additional code that enables the plug-in to communicate with associated renderer processes and the browser process.
+
+Thread
+
+      To answer this I think you should first know what a processor is. A Processor is the piece of hardware that actually performs the computations. EDIT: (Computations like adding two numbers, sorting an array, basically executing the code that has been written)
+
+        Now moving on to the definition of a thread.
+
+          A thread is a basic unit of CPU utilization; it comprises a thread ID, a program counter, a register set, and a stack.
+
+          A process is an execution instance. Threads are the actual workers that perform the computations via CPU access. When there are multiple threads running for a process, the process provides common memory.
+
+
+link: https://stackoverflow.com/questions/5201852/what-is-a-thread-really
+
+
+
+
+      
+    
+  
+  
