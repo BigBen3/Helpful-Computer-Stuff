@@ -1,0 +1,29 @@
+A thread is a set of (CPU)instructions which can be executed.
+
+But in order to have a better understanding of what a thread is, some computer architecture knowledge is required.
+
+What a computer does, is to follow instructions and manipulate data. RAM is the place where the instructions and data are saved, the processor uses those instructions to perform operations on the saved data.
+
+
+The CPU has some internal memory cells called, registers. It can perform simple mathematical operations with numbers stored in these registers. It can also move data between the RAM and these registers. These are examples of typical operations a CPU can be instructed to execute:
+
+  Copy data from memory position #220 into register #3
+  Add the number from register #3 to the number from register #1.
+
+  The collection of all operations a CPU can do is called instruction set. Each operation in the instruction set is assigned a number. Computer code is essentially a sequence of numbers representing CPU operations, these numbers are stored in RAM.
+
+
+  The CPU works in a never-ending loop, always fetching and executing an instruction from memory. At the core of this cycle is the PC register, or Program Counter. It's a special register that stores the memory address of the next instruction to be executed.
+
+    The CPU will:
+      Fetch the instruction at the memory address given by the PC,
+      Increment the PC by 1,
+      Execute the instruction,
+      Go back to step 1.
+
+The CPU can be instructed to write a new value to the PC, causing the execution to branch, or "jump" to somewhere else in the memory. And this branching can be conditional. For instance, a CPU instruction could say: "set PC to address #200 if register #1 equals zero". This allows computers to execute stuff like this:
+
+  if  x = 0
+    compute_this()
+else
+    compute_that()
