@@ -1,0 +1,5 @@
+https://stackoverflow.com/questions/69892377/viewmodel-factory-class-doesnt-work-after-update-lifecycle-version
+
+essenetially all I had to do was remove the question mark here:  override fun <T : ViewModel> create(modelClass: Class<T>): T {}
+
+  before it was like : override fun <T : ViewModel?> create(modelClass: Class<T>): T {}
